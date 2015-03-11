@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150211053011) do
+ActiveRecord::Schema.define(version: 20150311044536) do
 
   create_table "days", force: true do |t|
     t.datetime "date"
@@ -25,6 +25,14 @@ ActiveRecord::Schema.define(version: 20150211053011) do
     t.datetime "to"
     t.string   "location"
     t.integer  "day_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "users", force: true do |t|
+    t.string   "name"
+    t.string   "email"
+    t.string   "password_digest"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
